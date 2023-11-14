@@ -17,7 +17,7 @@ for pagina in range(1, 35):
         table = soup.find('table', {'id': 'grauRiscoTable'})
         if table:
             # Extrair dados diretamente da tabela
-            rows = table.find_all('tr')[1:]  # Ignorar a primeira linha (cabeçalho)
+            rows = table.find_all('tr')[1:]  
             for row in rows:
                 columns = row.find_all(['td', 'th'])
                 codigo = columns[0].text.strip()
